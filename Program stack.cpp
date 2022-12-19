@@ -21,7 +21,7 @@ int IsFull(){ //untuk mengecek apakah stack penuh atau tidak
 	}
 }
 
-int IsEmpty(){ //untuk mengecek apakah stack kosong atau tidak
+int IsEmpty(){ //untuk mengecek apakah stack kosong atau nojoppoppomp
 	if(tumpuk.top == -1){ //-1 dikarenakan array dimulai dari 0
 		return 1;	   
 	} else {
