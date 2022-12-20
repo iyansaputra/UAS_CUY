@@ -77,7 +77,7 @@ int main (){
 					printf ("Asal Kota Pegawai : "); scanf ("%s", p[a].asal_kota);
 					printf ("Umur Pegawai : "); scanf ("%d", p[a].umur_pegawai);
 				}
-			case 2 : 
+			case 2 : //menampilkan seluruh data
 		}
 		
 	}while (x!=4);
