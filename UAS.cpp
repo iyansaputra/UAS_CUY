@@ -17,31 +17,31 @@ void AddDataPegawai(struct Pegawai *p){
 	p[0].id_pegawai = 345;
 	p[0].asal_kota = "Surabaya";
 	p[0].umur_pegawai = 25;
-	p[0].jabatan = "Karyawan";
+	p[0].jabatan = ".";
 	
 	p[1].nama_pegawai = "Ani";
 	p[1].id_pegawai = 230;
 	p[1].asal_kota = "Sidoarjo";
 	p[1].umur_pegawai = 30;
-	p[1].jabatan = "Manajer";
+	p[1].jabatan = ".";
 	
 	p[2].nama_pegawai = "Lala";
 	p[2].id_pegawai = 134;
 	p[2].asal_kota = "Semarang";
 	p[2].umur_pegawai = 22;
-	p[2].jabatan = "Karyawan";
+	p[2].jabatan = ".";
 	
 	p[3].nama_pegawai = "Didi";
 	p[3].id_pegawai = 310;
 	p[3].asal_kota = "Jambi";
 	p[3].umur_pegawai = 35;
-	p[3].jabatan = "Direksi Utama";
+	p[3].jabatan = ".";
 	
 	p[4].nama_pegawai = "Joko";
 	p[4].id_pegawai = 239;
 	p[4].asal_kota = "Serang";
 	p[4].umur_pegawai = 29;
-	p[4].jabatan = "Karyawan";
+	p[4].jabatan = ".";
 }
 
 int main (){
@@ -80,6 +80,28 @@ int main (){
 					printf ("5. Manager Pemasaran\n");
 					printf ("6. Staff\n");
 					printf ("Masukan Pilihan Jabatan : "); scanf ("%d", &c)
+						if (c==1){
+							p[a].jabatan = "Direksi";
+						}
+						else if (c==2){
+							p[a].jabatan = "Direktur Utama";
+						}
+						else if (c==3){
+							p[a].jabatan = "Direktur";
+						}
+						else if (c==4){
+							p[a].jabatan = "Manager";
+						}
+						else if (c==5){
+							p[a].jabatan = "Manager Pemasaran";
+						}
+						else if (c==6){
+							p[a].jabatan = "Staff";
+						}
+						else{
+							printf ("Anda Salah Memasukan Angka\n");
+						}
+					
 					printf ("Asal Kota Pegawai : "); scanf ("%s", p[a].asal_kota);
 					printf ("Umur Pegawai : "); scanf ("%d", p[a].umur_pegawai);
 				}
