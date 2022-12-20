@@ -76,8 +76,15 @@ int main (){
 					printf ("1. ");
 					printf ("Asal Kota Pegawai : "); scanf ("%s", p[a].asal_kota);
 					printf ("Umur Pegawai : "); scanf ("%d", p[a].umur_pegawai);
+					printf ("Jabatan pegawai: "); scanf ("%s", p[a].jabatan);
 				}
+			break;
 			case 2 : //menampilkan seluruh data
+				for (a=0; a<b; a++){
+					printf ("%s\t%d\%s\t%d\t%s", p[a].nama_pegawai, p[a].id_pegawai, p[a].asal_kota, p[a].umur_pegawai, p[a].jabatan);
+				}
+				printf ("==============================================================\n");
+			break;
 		}
 		
 	}while (x!=4);
