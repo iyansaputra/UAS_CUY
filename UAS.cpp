@@ -11,13 +11,13 @@ typedef struct Pegawai{
 	int gaji, durasi_bekerja, durasi_lembur;
 }p;
 
-//Memasukan Data
+//Data Awal Program
 void AddDataPegawai(struct Pegawai *p){
-	p[0].nama_pegawai = "";
-	p[0].id_pegawai = "";
-	p[0].asal_kota = "";
-	p[0].umur_pegawai = "";
-	p[0].jabatan = "";
+	p[0].nama_pegawai = "Budi";
+	p[0].id_pegawai = 345;
+	p[0].asal_kota = "Surabaya";
+	p[0].umur_pegawai = "25";
+	p[0].jabatan = "Karyawan";
 	
 	p[1].nama_pegawai = "";
 	p[1].id_pegawai = "";
@@ -51,11 +51,35 @@ int main (){
 	int a, x;
 	
 	do {
+		//Menampilkan Menu Program
 		printf ("Program\n");
 		printf ("==============\n");
 		printf ("1. Input Data Baru\n");
 		printf ("2. Tampilkan Seluruh Data\n");
 		printf ("3. Hitung Gaji Pegawai\n");
 		printf ("4. Cari ID Pegawai\n");
-	}
+		printf ("===========================\n");
+		printf ("Masukan Pilihan Anda : ");
+		scanf ("&d", &x);
+		
+		switch (x){
+			case 1 : //Memasukan Data Baru
+				printf ("Memasukan Data Baru :\n");
+				printf ("============================\n");
+				printf ("Masukan Total Data Pegawai Baru (MAX 10) : "); scanf ("%d", &b);
+				
+				for (a=0; a<b; a++){
+					printf ("Masukan Nama Pegawai : "); scanf ("%s", p[a].nama_pegawai);
+					printf ("Masukan ID Pegawai : "); scanf ("%s", p[a].id_pegawai);
+					printf ("Masukan Jabatan Pegawai : \n");
+					printf ("=============================\n");
+					printf ("1. ")
+					printf ("Asal Kota Pegawai : "); scanf ("%s", p[a].asal_kota);
+					printf ("Umur Pegawai : "); scanf ("%d", p[a].umur_pegawai);
+				}
+		}
+		
+	}while (x!=4);
+
+return 0;
 }
