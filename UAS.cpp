@@ -17,38 +17,38 @@ void AddDataPegawai(struct Pegawai *p){
 	p[0].id_pegawai = 345;
 	p[0].asal_kota = "Surabaya";
 	p[0].umur_pegawai = "25";
-	p[0].jabatan = "Manager";
+	p[0].jabatan = "Karyawan";
 	
-	p[1].nama_pegawai = "";
-	p[1].id_pegawai = "";
-	p[1].asal_kota = "";
-	p[1].umur_pegawai = "";
-	p[1].jabatan = "";
+	p[1].nama_pegawai = "Ani";
+	p[1].id_pegawai = "230";
+	p[1].asal_kota = "Sidoarjo";
+	p[1].umur_pegawai = "30";
+	p[1].jabatan = "Manajer";
 	
-	p[2].nama_pegawai = "";
-	p[2].id_pegawai = "";
-	p[2].asal_kota = "";
-	p[2].umur_pegawai = "";
-	p[2].jabatan = "";
+	p[2].nama_pegawai = "Lala";
+	p[2].id_pegawai = "134";
+	p[2].asal_kota = "Semarang";
+	p[2].umur_pegawai = "22";
+	p[2].jabatan = "Karyawan";
 	
-	p[3].nama_pegawai = "";
-	p[3].id_pegawai = "";
-	p[3].asal_kota = "";
-	p[3].umur_pegawai = "";
-	p[3].jabatan = "";
+	p[3].nama_pegawai = "Didi";
+	p[3].id_pegawai = "310";
+	p[3].asal_kota = "Jambi";
+	p[3].umur_pegawai = "35";
+	p[3].jabatan = "Direksi Utama";
 	
-	p[4].nama_pegawai = "";
-	p[4].id_pegawai = "";
-	p[4].asal_kota = "";
-	p[4].umur_pegawai = "";
-	p[4].jabatan = "";
+	p[4].nama_pegawai = "Joko";
+	p[4].id_pegawai = "239";
+	p[4].asal_kota = "Serang";
+	p[4].umur_pegawai = "29";
+	p[4].jabatan = "Karyawan";
 }
 
 int main (){
 	Pegawai p[15];
 	AddDataPegawai(p);
 	
-	int a, x, b, c;
+	int a, x;
 	
 	do {
 		//Menampilkan Menu Program
@@ -73,14 +73,7 @@ int main (){
 					printf ("Masukan ID Pegawai : "); scanf ("%s", p[a].id_pegawai);
 					printf ("Masukan Jabatan Pegawai : \n");
 					printf ("=============================\n");
-					printf ("1. Direksi");
-					printf ("2. Direktur Utama");
-					printf ("3. Direktur");
-					printf ("4. Manager");
-					printf ("5. Manager Pemasaran");
-					printf ("6. Staff");
-					printf ("Masukan Pilihan Jabatan : "); scanf ("%d", &c);
-						if ()
+					printf ("1. ")
 					printf ("Asal Kota Pegawai : "); scanf ("%s", p[a].asal_kota);
 					printf ("Umur Pegawai : "); scanf ("%d", p[a].umur_pegawai);
 				}
