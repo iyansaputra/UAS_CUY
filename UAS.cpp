@@ -14,7 +14,7 @@ typedef struct Pegawai{
 //Data Awal Program
 void AddDataPegawai(struct Pegawai *p){
 	p[0].nama_pegawai = "Budi";
-	p[0].id_pegawai = 345;
+	p[0].id_pegawai = "345";
 	p[0].asal_kota = "Surabaya";
 	p[0].umur_pegawai = "25";
 	p[0].jabatan = "Karyawan";
@@ -48,7 +48,7 @@ int main (){
 	Pegawai p[15];
 	AddDataPegawai(p);
 	
-	int a, x;
+	int a, x, b;
 	
 	do {
 		//Menampilkan Menu Program
@@ -73,10 +73,11 @@ int main (){
 					printf ("Masukan ID Pegawai : "); scanf ("%s", p[a].id_pegawai);
 					printf ("Masukan Jabatan Pegawai : \n");
 					printf ("=============================\n");
-					printf ("1. ")
+					printf ("1. ");
 					printf ("Asal Kota Pegawai : "); scanf ("%s", p[a].asal_kota);
 					printf ("Umur Pegawai : "); scanf ("%d", p[a].umur_pegawai);
 				}
+			case 2 : 
 		}
 		
 	}while (x!=4);
