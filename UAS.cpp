@@ -17,7 +17,7 @@ void AddDataPegawai(struct Pegawai *p){
 	p[0].id_pegawai = 345;
 	p[0].asal_kota = "Surabaya";
 	p[0].umur_pegawai = "25";
-	p[0].jabatan = "Karyawan";
+	p[0].jabatan = "Manager";
 	
 	p[1].nama_pegawai = "";
 	p[1].id_pegawai = "";
@@ -48,7 +48,7 @@ int main (){
 	Pegawai p[15];
 	AddDataPegawai(p);
 	
-	int a, x;
+	int a, x, b, c;
 	
 	do {
 		//Menampilkan Menu Program
@@ -73,7 +73,14 @@ int main (){
 					printf ("Masukan ID Pegawai : "); scanf ("%s", p[a].id_pegawai);
 					printf ("Masukan Jabatan Pegawai : \n");
 					printf ("=============================\n");
-					printf ("1. ")
+					printf ("1. Direksi");
+					printf ("2. Direktur Utama");
+					printf ("3. Direktur");
+					printf ("4. Manager");
+					printf ("5. Manager Pemasaran");
+					printf ("6. Staff");
+					printf ("Masukan Pilihan Jabatan : "); scanf ("%d", &c);
+						if ()
 					printf ("Asal Kota Pegawai : "); scanf ("%s", p[a].asal_kota);
 					printf ("Umur Pegawai : "); scanf ("%d", p[a].umur_pegawai);
 				}
