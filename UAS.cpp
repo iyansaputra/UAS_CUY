@@ -48,7 +48,7 @@ int main (){
 	Pegawai p[15];
 	AddDataPegawai(p);
 	
-	int a, x, b;
+	int a, x, b, c;
 	
 	do {
 		//Menampilkan Menu Program
@@ -73,7 +73,13 @@ int main (){
 					printf ("Masukan ID Pegawai : "); scanf ("%s", p[a].id_pegawai);
 					printf ("Masukan Jabatan Pegawai : \n");
 					printf ("=============================\n");
-					printf ("1. ");
+					printf ("1. Direksi (CEO)\n");
+					printf ("2. Direktur Utama\n");
+					printf ("3. Direktur\n");
+					printf ("4. Manager\n");
+					printf ("5. Manager Pemasaran\n");
+					printf ("6. Staff\n");
+					printf ("Masukan Pilihan Jabatan : "); scanf ("%d", &c)
 					printf ("Asal Kota Pegawai : "); scanf ("%s", p[a].asal_kota);
 					printf ("Umur Pegawai : "); scanf ("%d", p[a].umur_pegawai);
 					printf ("Jabatan pegawai: "); scanf ("%s", p[a].jabatan);
