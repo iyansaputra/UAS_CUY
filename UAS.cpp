@@ -82,7 +82,6 @@ int main (){
 					printf ("Masukan Pilihan Jabatan : "); scanf ("%d", &c)
 					printf ("Asal Kota Pegawai : "); scanf ("%s", p[a].asal_kota);
 					printf ("Umur Pegawai : "); scanf ("%d", p[a].umur_pegawai);
-					printf ("Jabatan pegawai: "); scanf ("%s", p[a].jabatan);
 				}
 			break;
 			case 2 : //menampilkan seluruh data
