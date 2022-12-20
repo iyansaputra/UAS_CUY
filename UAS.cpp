@@ -79,7 +79,8 @@ int main (){
 					printf ("4. Manager\n");
 					printf ("5. Manager Pemasaran\n");
 					printf ("6. Staff\n");
-					printf ("Masukan Pilihan Jabatan : "); scanf ("%d", &c)
+					printf ("Masukan Pilihan Jabatan : "); scanf ("%d", &c);
+					
 						if (c==1){
 							p[a].jabatan = "Direksi";
 						}
