@@ -52,7 +52,7 @@ int main (){
 	
 	do {
 		//Menampilkan Menu Program
-		printf ("Program\n");
+		printf ("Program Data Pegawai\n");
 		printf ("==============\n");
 		printf ("1. Input Data Baru\n");
 		printf ("2. Tampilkan Seluruh Data\n");
@@ -107,12 +107,20 @@ int main (){
 					printf ("Umur Pegawai : "); scanf ("%d", p[a].umur_pegawai);
 				}
 			break;
+				
 			case 2 : //menampilkan seluruh data
-				for (a=0; a<b; a++){
-					printf ("%s\t%d\%s\t%d\t%s", p[a].nama_pegawai, p[a].id_pegawai, p[a].asal_kota, p[a].umur_pegawai, p[a].jabatan);
-				}
-				printf ("==============================================================\n");
+			printf ("-----------------------<<(PROGRAM DATA PEGAWAI)>>--------------------------------\n");
+			printf ("+----------------+---------------+--------------+----------------+---------------+\n");
+   			printf ("|  Nama_Pegawai  |   Id_Pegawai  |  Asal_Kota	 | Umur_Pegawai   | 	Jabatan	  |\n");
+    			printf ("+----------------+---------------+--------------+----------------+---------------+\n");
+ 
+			for (a=0; a<b; a++)
+			{
+			printf ("|  	%s\t  	  |	  %d\t    |  	%d\t	 | 	%s\t 	  |	%s\t 	  |\n");
+    			printf ("+----------------+---------------+--------------+----------------+---------------+\n", p[a].nama_pegawai, p[a].id_pegawai, p[a].asal_kota, p[a].umur_pegawai, p[a].jabatan);
+			}
 			break;
+				
 			case 3 :
 			
 			break;
