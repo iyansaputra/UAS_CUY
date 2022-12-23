@@ -121,7 +121,7 @@ int main (){
 			}
 			break;
 				
-			case 3 :
+			case 3 ://Menghitung gaji
 			
 			break;
 			case 4 :
