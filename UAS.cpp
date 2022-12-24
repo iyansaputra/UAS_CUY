@@ -59,7 +59,7 @@ int main (){
 		printf ("4. Cari ID Pegawai\n");
 		printf ("===========================\n");
 		printf ("Masukan Pilihan Anda : ");
-		scanf ("&d", &x);
+		scanf ("%d", &x);
 		
 		switch (x){
 			case 1 : //Memasukan Data Baru
