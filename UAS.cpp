@@ -57,6 +57,7 @@ int main (){
 		printf ("2. Tampilkan Seluruh Data\n");
 		printf ("3. Hitung Gaji Pegawai\n");
 		printf ("4. Cari ID Pegawai\n");
+		printf ("5. Keluar\n");
 		printf ("===========================\n");
 		printf ("Masukan Pilihan Anda : ");
 		scanf ("&d", &x);
@@ -122,7 +123,7 @@ int main (){
 				
 			case 3 ://Menghitung gaji
 				printf ("Masukkan ID pegawai: "); scanf ("%d", p[a].id_pegawai);
-				printf ("")
+				printf ("");
 				//sabar, aku buat dulu yang menghitung gaji
 			
 			break;
@@ -131,7 +132,7 @@ int main (){
 			break;
 		}
 		
-	}while (x!=4);
+	}while (x!=5);
 
 return 0;
 }
