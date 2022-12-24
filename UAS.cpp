@@ -124,6 +124,7 @@ int main (){
 				printf ("Masukkan ID pegawai: "); scanf ("%d", p[a].id_pegawai);
 				printf ("");
 				//sabar, aku buat dulu yang menghitung gaji
+				//kalian bisa buat yang searching id pegawai dulu
 			
 			break;
 			case 4 :
