@@ -57,7 +57,6 @@ int main (){
 		printf ("2. Tampilkan Seluruh Data\n");
 		printf ("3. Hitung Gaji Pegawai\n");
 		printf ("4. Cari ID Pegawai\n");
-		printf ("5. Keluar\n");
 		printf ("===========================\n");
 		printf ("Masukan Pilihan Anda : ");
 		scanf ("&d", &x);
