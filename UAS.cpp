@@ -47,7 +47,7 @@ int main (){
 	Pegawai p[15];
 	AddDataPegawai(p);
 	
-	int a, x, b, c;
+	int a, x, b, c, l, j, lembur, lanjut;
 	
 	do {
 		//Menampilkan Menu Program
@@ -121,11 +121,53 @@ int main (){
 			break;
 				
 			case 3 ://Menghitung gaji
-				printf ("Masukkan ID pegawai: "); scanf ("%d", p[a].id_pegawai);
-				printf ("");
-				//sabar, aku buat dulu yang menghitung gaji
-				//kalian bisa buat yang searching id pegawai dulu
-			
+				AddDataPegawai(p);
+				
+				do{
+					printf ("Masukkan ID pegawai: "); scanf ("%d", &p[a].id_pegawai);
+					printf ("Masukkan Nama Pegawai: "); scanf ("%s", &p[a].nama_pegawai);
+					printf ("1. Lembur\n2. Tidak lembur\n"); scanf ("%d", &l);
+					if (l==1){
+						printf ("Durasi Lembur (Jam): "); scanf ("%d", &j);
+						
+						lembur=j*100000;
+						printf ("Uang lembur= Rp.%d\n", lembur);
+					}
+					else{
+						lembur=NULL;
+					}
+					printf ("1. Direksi (CEO)\n");
+					printf ("2. Direktur Utama\n");
+					printf ("3. Direktur\n");
+					printf ("4. Manager\n");
+					printf ("5. Manager Pemasaran\n");
+					printf ("6. Staff\n");
+					printf ("Masukan Pilihan Jabatan : "); scanf ("%d", &c);
+					
+					switch (c){
+						case 1:
+							printf ("Gaji = Rp.200.000.000 + Rp. %d\n", lembur);
+						break;
+						case 2:
+							printf ("Gaji = Rp.500.000.000 + Rp. %d\n", lembur);
+						break;
+						case 3:
+							printf ("Gaji = Rp.200.000.000 + Rp. %d\n", lembur);
+						break;
+						case 4:
+							printf ("Gaji = Rp.10.000.000 + Rp. %d\n", lembur);
+						break;
+						case 5:
+							printf ("Gaji = Rp.12.000.000 + Rp. %d\n", lembur);
+						break;
+						case 6:
+							printf ("Gaji = Rp.4.000.000 + Rp. %d\n", lembur);
+						break;
+					}
+					printf ("\nInput 1 untuk lanjut\nInput 0 untuk berhenti: "); scanf ("%d", &lanjut);
+					printf ("\n");
+					system ("cls");
+				}while (lanjut!=0);
 			break;
 			case 4 :
 				
