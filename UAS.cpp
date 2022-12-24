@@ -122,6 +122,9 @@ int main (){
 			break;
 				
 			case 3 ://Menghitung gaji
+				printf ("Masukkan ID pegawai: "); scanf ("%d", p[a].id_pegawai);
+				printf ("")
+				//sabar, aku buat dulu yang menghitung gaji
 			
 			break;
 			case 4 :
