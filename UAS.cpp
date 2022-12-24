@@ -102,8 +102,8 @@ int main (){
 							printf ("Anda Salah Memasukan Angka\n");
 						}
 					
-					printf ("Asal Kota Pegawai : "); scanf ("%s", p[a].asal_kota);
-					printf ("Umur Pegawai : "); scanf ("%d", p[a].umur_pegawai);
+					printf ("Asal Kota Pegawai : "); scanf ("%s", &p[a].asal_kota);
+					printf ("Umur Pegawai : "); scanf ("%d", &p[a].umur_pegawai);
 				}
 			break;
 				
