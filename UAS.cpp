@@ -68,8 +68,8 @@ int main (){
 				printf ("Masukan Total Data Pegawai Baru (MAX 10) : "); scanf ("%d", &b);
 				
 				for (a=0; a<b; a++){
-					printf ("Masukan Nama Pegawai : "); scanf ("%s", p[a].nama_pegawai);
-					printf ("Masukan ID Pegawai : "); scanf ("%d", p[a].id_pegawai);
+					printf ("Masukan Nama Pegawai : "); scanf ("%s", &p[a].nama_pegawai);
+					printf ("Masukan ID Pegawai : "); scanf ("%d", &p[a].id_pegawai);
 					printf ("Masukan Jabatan Pegawai : \n");
 					printf ("=============================\n");
 					printf ("1. Direksi (CEO)\n");
