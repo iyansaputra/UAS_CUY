@@ -3,51 +3,81 @@
 #include <string>
 #include <windows.h>
 
-typedef struct Pegawai{
-	char *nama_pegawai, *asal_kota;
-	int umur_pegawai, id_pegawai;
-	char *pangkat, *jabatan;
-	int gaji, durasi_bekerja, durasi_lembur;
-}p;
+	struct Pegawai{
+		char nama_pegawai[40];
+		char asal_kota[20];
+		char jabatan_pegawai[15];
+		int id_pegawai;
+		int umur_pegawai;
+		int gaji;
+		int durasi_lembur;
+};
+
+	struct Baru{
+		char nama_baru[40];
+		char kota_baru[20];
+		char jabatan[15];
+		int id_baru;
+		int umur_baru;
+	};
 
 //Data Awal Program
 void AddDataPegawai(struct Pegawai *p){
-	p[0].nama_pegawai = "Budi";
+	strcpy (p[0].nama_pegawai, "Budi");
 	p[0].id_pegawai = 345;
-	p[0].asal_kota = "Surabaya";
+	strcpy (p[0].jabatan_pegawai, "Manajer");
+	strcpy (p[0].asal_kota, "Surabaya");
 	p[0].umur_pegawai = 25;
-	p[0].jabatan = "Manajer";
+	p[0].gaji = 10000000;
+	p[0].durasi_lembur = 4;
 	
-	p[1].nama_pegawai = "Ani";
+	strcpy (p[1].nama_pegawai, "Ani");
 	p[1].id_pegawai = 230;
-	p[1].asal_kota = "Sidoarjo";
+	strcpy (p[1].jabatan_pegawai, "Direktur");
+	strcpy (p[1].asal_kota, "Sidoarjo");
 	p[1].umur_pegawai = 30;
-	p[1].jabatan = "Direktur";
+	p[1].gaji = 200000000;
+	p[1].durasi_lembur = 0;
 	
-	p[2].nama_pegawai = "Lala";
+	strcpy (p[2].nama_pegawai, "Lala");
 	p[2].id_pegawai = 134;
-	p[2].asal_kota = "Semarang";
+	strcpy (p[2].jabatan_pegawai, "Manajer Pemasaran");
+	strcpy (p[2].asal_kota, "Semarang");
 	p[2].umur_pegawai = 22;
-	p[2].jabatan = "Manajer Pemasaran";
+	p[2].gaji = 12000000;
+	p[2].durasi_lembur = 2;
 	
-	p[3].nama_pegawai = "Didi";
+	strcpy (p[3].nama_pegawai, "Didi");
 	p[3].id_pegawai = 310;
-	p[3].asal_kota = "Jambi";
+	strcpy (p[3].jabatan_pegawai, "Direktur Utama");
+	strcpy (p[3].asal_kota, "Jambi");
 	p[3].umur_pegawai = 35;
-	p[3].jabatan = "Direktur Utama";
+	p[3].gaji = 500000000;
+	p[3].durasi_lembur = 0;
 	
-	p[4].nama_pegawai = "Joko";
+	strcpy (p[4].nama_pegawai, "Joko");
 	p[4].id_pegawai = 239;
-	p[4].asal_kota = "Serang";
+	strcpy (p[4].jabatan_pegawai, "Direksi");
+	strcpy (p[4].asal_kota, "Serang");
 	p[4].umur_pegawai = 29;
-	p[4].jabatan = "Direksi";
+	p[4].gaji = 200000000;
+	p[4].durasi_lembur = 10;
 }
 
 int main (){
-	Pegawai p[15];
+	Pegawai p[5];
 	AddDataPegawai(p);
+	Baru n[10];
 	
 	int a, x, b, c, l, j, lembur, lanjut, i, min=0;
+
+	printf ("+----------------+---------------+--------------+----------------+---------------+\n");
+   	printf ("|  Nama Pegawai  |   Id Pegawai  |  Jabatan	 | Asal Kota   | 	Umur	  |\n");
+    printf ("+----------------+---------------+--------------+----------------+---------------+\n");
+		for (a=0; a<=4; a++){
+			printf ("|  	%s\t  	  |	  %i\t    |  	%s\t	 | 	%s\t 	  |	%i\t 	  |\n", p[a].nama_pegawai, p[a].id_pegawai, p[a].jabatan_pegawai, p[a].asal_kota, p[a].umur_pegawai);
+		}
+	printf ("\n\n");
 	
 	do {
 		//Menampilkan Menu Program
@@ -60,15 +90,16 @@ int main (){
 		printf ("===========================\n");
 		printf ("Masukan Pilihan Anda : ");
 		scanf ("%d", &x);
+		system ("cls");
 		
 		switch (x){
 			case 1 : //Memasukan Data Baru
 				printf ("Memasukan Data Baru :\n");
 				printf ("======================\n");
-				printf ("Masukan Total Data Pegawai Baru (MAX 10) : "); scanf ("%d", &b);
+				printf ("Masukan Data Pegawai Baru (MAX 10) : "); scanf ("%d", &b);
 				
 				for (a=0; a<b; a++){
-					printf ("Masukan Nama Pegawai : "); scanf ("%s", &p[a].nama_pegawai);
+					printf ("Masukan Nama Pegawai : "); scanf ("%s", n[a].nama_baru);
 					printf ("Masukan ID Pegawai : "); scanf ("%d", &p[a].id_pegawai);
 					printf ("Masukan Jabatan Pegawai : \n");
 					printf ("=============================\n");
@@ -81,39 +112,40 @@ int main (){
 					printf ("Masukan Pilihan Jabatan : "); scanf ("%d", &c);
 					
 						if (c==1){
-							p[a].jabatan = "Direksi";
+							n[a].jabatan, "Direksi";
 						}
 						else if (c==2){
-							p[a].jabatan = "Direktur Utama";
+							n[a].jabatan, "Direktur Utama";
 						}
 						else if (c==3){
-							p[a].jabatan = "Direktur";
+							n[a].jabatan, "Direktur";
 						}
 						else if (c==4){
-							p[a].jabatan = "Manager";
+							n[a].jabatan, "Manager";
 						}
 						else if (c==5){
-							p[a].jabatan = "Manager Pemasaran";
+							n[a].jabatan, "Manager Pemasaran";
 						}
 						else if (c==6){
-							p[a].jabatan = "Staff";
+							n[a].jabatan, "Staff";
 						}
 						else{
 							printf ("Anda Salah Memasukan Angka\n");
 						}
 					
-					printf ("Asal Kota Pegawai : "); scanf ("%s", &p[a].asal_kota);
-					printf ("Umur Pegawai : "); scanf ("%d", &p[a].umur_pegawai);
+					printf ("Asal Kota Pegawai : "); scanf ("%s", n[a].kota_baru);
+					printf ("Umur Pegawai : "); scanf ("%d", &n[a].umur_baru);
 					printf ("=======================\n");
+					system ("cls");
 				}
 			break;
 				
 			case 2 : //menampilkan seluruh data
 			Pegawai temp;
-			for (i=0; i<15; i++){
+			for (i=0; i<5; i++){
 					min = i;
 					
-					for (j = i; j<10; j++){
+					for (j = i; j<5; j++){
 						if(p[min].id_pegawai > p[j].id_pegawai){
 							min = j;
 						}
@@ -122,16 +154,30 @@ int main (){
 					p[i] = p[min];
 					p[min] = temp;
 				}
+				
+			Baru temp1;
+			for (i=0; i<10; i++){
+					min = i;
+					
+					for (j = i; j<10; j++){
+						if(n[min].id_baru > n[j].id_baru){
+							min = j;
+						}
+					}
+					temp1 = n[i];
+					n[i] = n[min];
+					n[min] = temp1;
+				}
 			printf ("-----------------------<<(PROGRAM DATA PEGAWAI)>>--------------------------------\n");
 			printf ("+----------------+---------------+--------------+----------------+---------------+\n");
-   			printf ("|  Nama_Pegawai  |   Id_Pegawai  |  Asal_Kota	 | Umur_Pegawai   | 	Jabatan	  |\n");
-    			printf ("+----------------+---------------+--------------+----------------+---------------+\n");
- 
-			for (a=0; a<b; a++)
-			{
-			printf ("|  	%s\t  	  |	  %d\t    |  	%d\t	 | 	%s\t 	  |	%s\t 	  |\n");
-    			printf ("+----------------+---------------+--------------+----------------+---------------+\n", p[a].nama_pegawai, p[a].id_pegawai, p[a].asal_kota, p[a].umur_pegawai, p[a].jabatan);
+   			printf ("|  Nama Pegawai  |   Id Pegawai  |  Jabatan	 | Asal Kota   | 	Umur	  |\n");
+    		printf ("+----------------+---------------+--------------+----------------+---------------+\n");
+			for (a=0; a<=4; a++){
+				printf ("|  	%s\t  	  |	  %i\t    |  	%s\t	 | 	%s\t 	  |	%i\t 	  |\n", p[a].nama_pegawai, p[a].id_pegawai, p[a].jabatan_pegawai, p[a].asal_kota, p[a].umur_pegawai);
 			}
+			for (a=0; a<b; a++){
+				printf ("|  	%s\t  	  |	  %i\t    |  	%s\t	 | 	%s\t 	  |	%i\t 	  |\n", n[a].nama_baru, n[a].id_baru, n[a].jabatan, n[a].kota_baru, n[a].umur_baru);
+			}	
 			break;
 				
 			case 3 ://Menghitung gaji
