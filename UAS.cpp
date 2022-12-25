@@ -64,7 +64,7 @@ int main (){
 		switch (x){
 			case 1 : //Memasukan Data Baru
 				printf ("Memasukan Data Baru :\n");
-				printf ("============================\n");
+				("-----------------------<<(PROGRAM DATA PEGAWAI)>>--------------------------------\n");
 				printf ("Masukan Total Data Pegawai Baru (MAX 10) : "); scanf ("%d", &b);
 				
 				for (a=0; a<b; a++){
@@ -104,10 +104,24 @@ int main (){
 					
 					printf ("Asal Kota Pegawai : "); scanf ("%s", &p[a].asal_kota);
 					printf ("Umur Pegawai : "); scanf ("%d", &p[a].umur_pegawai);
+					printf ("=================================================\n");
 				}
 			break;
 				
 			case 2 : //menampilkan seluruh data
+			Pegawai temp;
+			for (i=0; i<15; i++){
+					min = i;
+					
+					for (j = i; j<10; j++){
+						if(p[min].id_pegawai > p[j].id_pegawai){
+							min = j;
+						}
+					}
+					temp = p[i];
+					p[i] = p[min];
+					p[min] = temp;
+				}
 			printf ("-----------------------<<(PROGRAM DATA PEGAWAI)>>--------------------------------\n");
 			printf ("+----------------+---------------+--------------+----------------+---------------+\n");
    			printf ("|  Nama_Pegawai  |   Id_Pegawai  |  Asal_Kota	 | Umur_Pegawai   | 	Jabatan	  |\n");
