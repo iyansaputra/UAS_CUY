@@ -51,10 +51,10 @@ int main (){
 	
 	do {
 		//Menampilkan Menu Program
-		printf ("Program Data Pegawai\n");
+		printf ("-----------------------<<(PROGRAM DATA PEGAWAI)>>--------------------------------\n");
 		printf ("==============\n");
 		printf ("1. Input Data Baru\n");
-		printf ("2. Tampilkan Seluruh Data\n");
+		printf ("2. Tampilkan Seluruh Data (Ascending)\n");
 		printf ("3. Hitung Gaji Pegawai\n");
 		printf ("4. Cari ID Pegawai\n");
 		printf ("===========================\n");
@@ -64,7 +64,7 @@ int main (){
 		switch (x){
 			case 1 : //Memasukan Data Baru
 				printf ("Memasukan Data Baru :\n");
-				("-----------------------<<(PROGRAM DATA PEGAWAI)>>--------------------------------\n");
+				printf ("======================\n");
 				printf ("Masukan Total Data Pegawai Baru (MAX 10) : "); scanf ("%d", &b);
 				
 				for (a=0; a<b; a++){
