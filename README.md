@@ -11,12 +11,12 @@ Anggota:
 ## Method
 
 ```
-Queue + Stack
 ```
 ## Case
 
 
 ```
+Sistem Data Pegawai
 ```
 ## Syarat
 
