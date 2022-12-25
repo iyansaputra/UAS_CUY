@@ -229,7 +229,12 @@ int main (){
 					system ("cls");
 				}while (lanjut!=0);
 			break;
-			case 4 :
+			case 4 : //cari id pegawai
+				//lagi tak buat btw bukan user cpp
+				void CariIDPegawai(struct Pegawai *p, char *nama){
+				int found = 0;
+				for(int i = 0; i < 15; i++){
+					if(strcmp(p[i].nama_pegawai, nama) == 0){
 				
 			break;
 		}
