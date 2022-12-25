@@ -11,6 +11,7 @@ Anggota:
 ## Method
 
 ```
+Searching & Sorting
 ```
 ## Case
 
@@ -29,3 +30,4 @@ Sistem Data Pegawai
 
 ```
 ## Problem Pengimplementasian
+Mendata para pegawai agar bisa mengaji para pegawai dengan rapi
