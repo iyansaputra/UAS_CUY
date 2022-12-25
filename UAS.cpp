@@ -230,12 +230,20 @@ int main (){
 				}while (lanjut!=0);
 			break;
 			case 4 : //cari id pegawai
-				//lagi tak buat btw bukan user cpp
-				void CariIDPegawai(struct Pegawai *p, char *nama){
-				int found = 0;
-				for(int i = 0; i < 15; i++){
-					if(strcmp(p[i].nama_pegawai, nama) == 0){
-				
+				int idCari, i;
+			printf("Masukkan ID pegawai yang akan dicari :  ");
+			scanf("%d", &idCari);
+			
+			for (i = 0; i < 15; i++) {
+ 				 if (p[i].id_pegawai == idCari) {
+   				 printf("Pegawai dengan ID %d adalah %s\n", idCari, p[i].nama_pegawai);  				 
+    		break;
+  			}
+			}
+			if (i == 15) {
+ 			 printf("Pegawai dengan ID %d tidak ditemukan\n", idCari);
+			}
+
 			break;
 		}
 		
