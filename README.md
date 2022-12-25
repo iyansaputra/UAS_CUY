@@ -5,6 +5,7 @@
 Anggota:
 + Ahmad Sofian Aris S 21081010211
 + Abdul Azis Naufal F 21081010210
++ Ajeng Listya Devani 21081010220
 + Samuel Wijaya 21081010249
 
 
