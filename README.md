@@ -22,8 +22,9 @@ Sistem Data Pegawai
 ## Syarat
 
 ```
-1. Bisa Berjalan
-2. Menghitung Gaji Uang
+1. masukan data pegawai baru
+2. mencari data pegawai
+3. menghitung gaji pegawai
 ```
 ## Ilustrasi
 ```
