@@ -2,9 +2,10 @@
 
 ## Contributors
 
-<a href = "https://github.com/iyansaputra/UAS_CUY/graphs/contributors">
-  <img src = "https://contrib.rocks/image?repo=iyansaputra/UAS_CUY"/>
-</a>
+Anggota:
++ Ahmad Sofian Aris S 21081010211
++ Abdul Azis Naufal F 21081010210
++ Samuel Wijaya 21081010249
 
 
 ## Method
