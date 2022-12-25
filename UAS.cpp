@@ -47,7 +47,7 @@ int main (){
 	Pegawai p[15];
 	AddDataPegawai(p);
 	
-	int a, x, b, c, l, j, lembur, lanjut;
+	int a, x, b, c, l, j, lembur, lanjut, i, min=0;
 	
 	do {
 		//Menampilkan Menu Program
