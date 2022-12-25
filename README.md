@@ -22,8 +22,8 @@ Sistem Data Pegawai
 ## Syarat
 
 ```
-+ Bisa Berjalan
-+ Menghitung Gaji Uang
+1. Bisa Berjalan
+2. Menghitung Gaji Uang
 ```
 ## Ilustrasi
 ```
