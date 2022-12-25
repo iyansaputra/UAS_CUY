@@ -236,7 +236,10 @@ int main (){
 			
 			for (i = 0; i < 15; i++) {
  				 if (p[i].id_pegawai == idCari) {
-   				 printf("Pegawai dengan ID %d adalah %s\n", idCari, p[i].nama_pegawai);  				 
+				 printf("Pegawai dengan ID %d adalah \n %s \n", idCari, p[i].nama_pegawai);  	
+				 printf(" Jabatan   : %s\n",p[i].jabatan_pegawai);
+				 printf(" Asal kota : %s\n",p[i].asal_kota);
+				 printf(" Umur      : %i\n",p[i].umur_pegawai);
     		break;
   			}
 			}
