@@ -104,8 +104,9 @@ int main (){
 		printf ("==============\n");
 		printf ("1. Input Data Baru\n");
 		printf ("2. Tampilkan Seluruh Data (Ascending)\n");
-		printf ("3. Hitung Gaji Pegawai\n");
-		printf ("4. Cari ID Pegawai\n");
+		printf ("3. Tampilkan Seluruh Data (Descending)\n");
+		printf ("4. Hitung Gaji Pegawai\n");
+		printf ("5. Cari ID Pegawai\n");
 		printf ("===========================\n");
 		printf ("Masukan Pilihan Anda : ");
 		scanf ("%d", &x);
@@ -159,7 +160,47 @@ int main (){
 				}
 			break;
 				
-			case 2 : //menampilkan seluruh data
+			case 3 : //menampilkan seluruh data secara descending
+			Pegawai temp;
+			for (i=0; i<7; i++){
+					min = i;
+					
+					for (j = i; j<10; j++){
+						if(p[min].id_pegawai < p[j].id_pegawai){
+							min = j;
+						}
+					}
+					temp = p[i];
+					p[i] = p[min];
+					p[min] = temp;
+				}
+				
+			Baru temp1;
+			for (i=0; i<10; i++){
+					min = i;
+					
+					for (j = i; j<10; j++){
+						if(n[min].id_baru > n[j].id_baru){
+							min = j;
+						}
+					}
+					temp1 = n[i];
+					n[i] = n[min];
+					n[min] = temp1;
+				}
+			printf ("--------------------<<(PENGURUTAN DATA PEGAWAI SECARA ASCENDING)>>----------------\n");
+			printf ("+----------------+---------------+--------------+----------------+---------------+\n");
+   			printf ("|  Nama Pegawai  |   Id Pegawai  |  Jabatan	 | Asal Kota   	  | 	Umur	  |\n");
+    			printf ("+----------------+---------------+--------------+----------------+---------------+\n");
+			for (a=0; a<=6; a++){
+			printf ("|  	%s  	  |	  %i      |  	%s	 | 	%s 	  |	%i\t 	  |\n", p[a].nama_pegawai, p[a].id_pegawai, p[a].jabatan_pegawai, p[a].asal_kota, p[a].umur_pegawai);
+			}
+			for (a=0; a<b; a++){
+			printf ("|  	%s  	  |	  %i      |  	%s	 | 	%s 	  |	%i	  |\n", n[a].nama_baru, n[a].id_baru, n[a].jabatan, n[a].kota_baru, n[a].umur_baru);
+			}	
+			break;
+				
+			case 3 : //menampilkan seluruh data secara descending
 			Pegawai temp;
 			for (i=0; i<7; i++){
 					min = i;
@@ -198,8 +239,9 @@ int main (){
 			printf ("|  	%s  	  |	  %i      |  	%s	 | 	%s 	  |	%i	  |\n", n[a].nama_baru, n[a].id_baru, n[a].jabatan, n[a].kota_baru, n[a].umur_baru);
 			}	
 			break;
+			
 				
-			case 3 ://Menghitung gaji
+			case 4 ://Menghitung gaji
 				AddDataPegawai(p);
 				
 				do{
@@ -248,7 +290,8 @@ int main (){
 					system ("cls");
 				}while (lanjut!=0);
 			break;
-			case 4 : //cari id pegawai
+				
+			case 5 : //cari id pegawai
 				int idCari, i;
 			printf("Masukkan ID pegawai yang akan dicari :  ");
 			scanf("%d", &idCari);
