@@ -21,7 +21,10 @@ Searching & Sorting
 ``
 ## Latar Belakang
 ``
-Final project yang kami kerjakan dengan judul “Aplikasi Sistem Data Pegawai” 
+Final project yang kami kerjakan dengan judul “Aplikasi Sistem Data Pegawai”
+progam ini dibuat untuk kebutuhan Para Pegawai, khususnya di daerah Perkantoran yang semakin bertambah seiring dengan banyaknya para pegawai perkantoran. oleh sebab itu, dibutuhkan solusi yang dapat membantu para admin komputer untuk mendata para pegawai dengan cepat, aman, dan nyaman.
+Program ini dibuat untuk membantu agar mendata para pegawai menjadi lebih rapi dan tertata sehingga tidak ada para pegawai yang complain.
+“Aplikasi Sistem Data Pegawai “ yang kami buat menginplementasikan tipe Pemograman Lanjut Searching & Sorting.
 ``
 
 
