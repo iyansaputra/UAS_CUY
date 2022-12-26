@@ -52,7 +52,7 @@ void AddDataPegawai(struct Pegawai *p){
 	strcpy (p[3].jabatan_pegawai, "Direktur Utama");
 	strcpy (p[3].asal_kota, "Jambi");
 	p[3].umur_pegawai = 35;
-	p[3].gaji = 500000000;
+	p[3].gaji = 50000000;
 	p[3].durasi_lembur = 0;
 	
 	strcpy (p[4].nama_pegawai, "Joko");
@@ -60,22 +60,41 @@ void AddDataPegawai(struct Pegawai *p){
 	strcpy (p[4].jabatan_pegawai, "Direksi");
 	strcpy (p[4].asal_kota, "Serang");
 	p[4].umur_pegawai = 29;
-	p[4].gaji = 200000000;
+	p[4].gaji = 20000000;
 	p[4].durasi_lembur = 10;
+	
+	strcpy (p[5].nama_pegawai, "Dina");
+	p[5].id_pegawai = 267;
+	strcpy (p[5].jabatan_pegawai, "Staff");
+	strcpy (p[5].asal_kota, "Bandung");
+	p[5].umur_pegawai = 26;
+	p[5].gaji = 16500000;
+	p[5].durasi_lembur = 9;
+	
+	strcpy (p[6].nama_pegawai, "Eri");
+	p[6].id_pegawai = 340;
+	strcpy (p[6].jabatan_pegawai, "Staff");
+	strcpy (p[6].asal_kota, "Jogja");
+	p[6].umur_pegawai = 25;
+	p[6].gaji = 16000000;
+	p[6].durasi_lembur = 9;
+	
 }
 
+
 int main (){
-	Pegawai p[5];
+	Pegawai p[10];
 	AddDataPegawai(p);
 	Baru n[10];
 	
 	int a, x, b, c, l, j, lembur, lanjut, i, min=0;
-
+	
 	printf ("+----------------+---------------+--------------+----------------+---------------+\n");
-   	printf ("|  Nama Pegawai  |   Id Pegawai  |  Jabatan	 | Asal Kota   | 	Umur	  |\n");
-    printf ("+----------------+---------------+--------------+----------------+---------------+\n");
-		for (a=0; a<=4; a++){
-			printf ("|  	%s\t  	  |	  %i\t    |  	%s\t	 | 	%s\t 	  |	%i\t 	  |\n", p[a].nama_pegawai, p[a].id_pegawai, p[a].jabatan_pegawai, p[a].asal_kota, p[a].umur_pegawai);
+   	printf ("|  Nama Pegawai  |   Id Pegawai  |  Jabatan	 |  Asal Kota     | 	Umur	  |\n");
+    	printf ("+----------------+---------------+--------------+----------------+---------------+\n");
+	
+	for (a=0; a<=6; a++){
+	printf ("|  	%s 	  |	  %i	  |  	%s	 | 	%s	  |	%i	  |\n", p[a].nama_pegawai, p[a].id_pegawai, p[a].jabatan_pegawai, p[a].asal_kota, p[a].umur_pegawai);
 		}
 	printf ("\n\n");
 	
@@ -142,10 +161,10 @@ int main (){
 				
 			case 2 : //menampilkan seluruh data
 			Pegawai temp;
-			for (i=0; i<5; i++){
+			for (i=0; i<7; i++){
 					min = i;
 					
-					for (j = i; j<5; j++){
+					for (j = i; j<10; j++){
 						if(p[min].id_pegawai > p[j].id_pegawai){
 							min = j;
 						}
@@ -168,15 +187,15 @@ int main (){
 					n[i] = n[min];
 					n[min] = temp1;
 				}
-			printf ("-----------------------<<(PROGRAM DATA PEGAWAI)>>--------------------------------\n");
+			printf ("--------------------<<(PENGURUTAN DATA PEGAWAI SECARA ASCENDING)>>----------------\n");
 			printf ("+----------------+---------------+--------------+----------------+---------------+\n");
-   			printf ("|  Nama Pegawai  |   Id Pegawai  |  Jabatan	 | Asal Kota   | 	Umur	  |\n");
-    		printf ("+----------------+---------------+--------------+----------------+---------------+\n");
-			for (a=0; a<=4; a++){
-				printf ("|  	%s\t  	  |	  %i\t    |  	%s\t	 | 	%s\t 	  |	%i\t 	  |\n", p[a].nama_pegawai, p[a].id_pegawai, p[a].jabatan_pegawai, p[a].asal_kota, p[a].umur_pegawai);
+   			printf ("|  Nama Pegawai  |   Id Pegawai  |  Jabatan	 | Asal Kota   	  | 	Umur	  |\n");
+    			printf ("+----------------+---------------+--------------+----------------+---------------+\n");
+			for (a=0; a<=6; a++){
+			printf ("|  	%s  	  |	  %i      |  	%s	 | 	%s 	  |	%i\t 	  |\n", p[a].nama_pegawai, p[a].id_pegawai, p[a].jabatan_pegawai, p[a].asal_kota, p[a].umur_pegawai);
 			}
 			for (a=0; a<b; a++){
-				printf ("|  	%s\t  	  |	  %i\t    |  	%s\t	 | 	%s\t 	  |	%i\t 	  |\n", n[a].nama_baru, n[a].id_baru, n[a].jabatan, n[a].kota_baru, n[a].umur_baru);
+			printf ("|  	%s  	  |	  %i      |  	%s	 | 	%s 	  |	%i	  |\n", n[a].nama_baru, n[a].id_baru, n[a].jabatan, n[a].kota_baru, n[a].umur_baru);
 			}	
 			break;
 				
