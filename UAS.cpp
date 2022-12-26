@@ -64,7 +64,7 @@ void AddDataPegawai(struct Pegawai *p){
 	p[5].gaji = 16500000;
 	p[5].durasi_lembur = 9;
 	
-	strcpy (p[6].nama_pegawai, "Eri");
+	strcpy (p[6].nama_pegawai, "Eki");
 	p[6].id_pegawai = 340;
 	strcpy (p[6].jabatan_pegawai, "Staff");
 	strcpy (p[6].asal_kota, "Jogja");
@@ -72,28 +72,28 @@ void AddDataPegawai(struct Pegawai *p){
 	p[6].gaji = 16000000;
 	p[6].durasi_lembur = 9;
 	
-	strcpy (p[7].nama_pegawai, "Eri");
-	p[7].id_pegawai = 340;
+	strcpy (p[7].nama_pegawai, "Nini");
+	p[7].id_pegawai = 354;
 	strcpy (p[7].jabatan_pegawai, "Staff");
-	strcpy (p[7].asal_kota, "Jogja");
-	p[7].umur_pegawai = 25;
-	p[7].gaji = 16000000;
+	strcpy (p[7].asal_kota, "Bekasi");
+	p[7].umur_pegawai = 24;
+	p[7].gaji = 15000000;
 	p[7].durasi_lembur = 9;
 	
-	strcpy (p[8].nama_pegawai, "Eri");
-	p[8].id_pegawai = 340;
+	strcpy (p[8].nama_pegawai, "Fifi");
+	p[8].id_pegawai = 378;
 	strcpy (p[8].jabatan_pegawai, "Staff");
-	strcpy (p[8].asal_kota, "Jogja");
+	strcpy (p[8].asal_kota, "Kalimantan");
 	p[8].umur_pegawai = 25;
-	p[8].gaji = 16000000;
+	p[8].gaji = 14000000;
 	p[8].durasi_lembur = 9;
 	
-	strcpy (p[9].nama_pegawai, "Eri");
-	p[9].id_pegawai = 340;
+	strcpy (p[9].nama_pegawai, "Vina");
+	p[9].id_pegawai = 234;
 	strcpy (p[9].jabatan_pegawai, "Staff");
-	strcpy (p[9].asal_kota, "Jogja");
-	p[9].umur_pegawai = 25;
-	p[9].gaji = 16000000;
+	strcpy (p[9].asal_kota, "Gresik");
+	p[9].umur_pegawai = 23;
+	p[9].gaji = 13000000;
 	p[9].durasi_lembur = 9;
 }
 
