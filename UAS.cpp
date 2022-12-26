@@ -100,10 +100,10 @@ void AddDataPegawai(struct Pegawai *p){
 
 
 int main (){
-	Pegawai p[10];
+	Pegawai p[30];
 	AddDataPegawai(p);
 	
-	int a, x, b, c, co, l, j, p, lembur, lanjut, i, min=0;
+	int a, x, b, c, co, j, d, lembur, lanjut, i, min=0;
 	
 	printf ("+----------------+---------------+--------------+----------------+---------------+\n");
    	printf ("|  Nama Pegawai  |   Id Pegawai  |  Jabatan	 |  Asal Kota     | 	Umur	  |\n");
@@ -226,22 +226,16 @@ int main (){
 				AddDataPegawai(p);
 				printf ("1. Hitung gaji pegawai\n");
 				printf ("2. Tampilkan gaji pegawai\n");
-				printf ("Masukkan pilihan anda: "); scanf ("%d", &p);
-				switch (p){
+				printf ("Masukkan pilihan anda: "); scanf ("%d", &d);
+				switch (d){
 					case 1:
 						do{
 							printf ("Masukkan ID pegawai: "); scanf ("%d", &p[a].id_pegawai);
 							printf ("Masukkan Nama Pegawai: "); scanf ("%s", &p[a].nama_pegawai);
-							printf ("1. Lembur\n2. Tidak lembur\n"); scanf ("%d", &l);
-							if (l==1){
-								printf ("Durasi Lembur (Jam): "); scanf ("%d", &j);
+							printf ("Durasi Lembur (Jam): "); scanf ("%d", &j);
 								
-								lembur=j*100000;
-								printf ("Uang lembur= Rp.%d\n", lembur);
-							}
-							else{
-								lembur=NULL;
-							}
+							lembur=j*100000;
+							printf ("Uang lembur= Rp.%d\n", lembur);
 							printf ("1. Direksi (CEO)\n");
 							printf ("2. Direktur Utama\n");
 							printf ("3. Direktur\n");
@@ -275,8 +269,11 @@ int main (){
 							system ("cls");
 						}while (lanjut!=0);
 					break;
-					case 2:
-						for (a=0; a<)
+//					case 2:
+//						for (a=0; a<){
+//							
+//						}
+//					break;
 					}
 						
 			break;
