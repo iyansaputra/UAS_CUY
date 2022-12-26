@@ -191,11 +191,19 @@ int main (){
 						p[min] = temp;
 					}
 				if (b == 0){
+					printf ("--------------------<<(PENGURUTAN DATA PEGAWAI SECARA ASCENDING)>>----------------\n");
+					printf ("+----------------+---------------+--------------+----------------+---------------+\n");
+		   			printf ("|  Nama Pegawai  |   Id Pegawai  |  Jabatan	 | Asal Kota   	  | 	Umur	  |\n");
+		    		printf ("+----------------+---------------+--------------+----------------+---------------+\n");
 					for (a=0; a<10; a++){
 						printf ("|  	%s  	  |	  %i      |  	%s	 | 	%s 	  |	%i\t 	  |\n", p[a].nama_pegawai, p[a].id_pegawai, p[a].jabatan_pegawai, p[a].asal_kota, p[a].umur_pegawai);
 					}
 				}
 				else{
+					printf ("--------------------<<(PENGURUTAN DATA PEGAWAI SECARA ASCENDING)>>----------------\n");
+					printf ("+----------------+---------------+--------------+----------------+---------------+\n");
+		   			printf ("|  Nama Pegawai  |   Id Pegawai  |  Jabatan	 | Asal Kota   	  | 	Umur	  |\n");
+		    		printf ("+----------------+---------------+--------------+----------------+---------------+\n");
 					for (a=0; a<co; a++){
 						printf ("|  	%s  	  |	  %i      |  	%s	 | 	%s 	  |	%i\t 	  |\n", p[a].nama_pegawai, p[a].id_pegawai, p[a].jabatan_pegawai, p[a].asal_kota, p[a].umur_pegawai);
 					}	
