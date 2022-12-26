@@ -178,7 +178,7 @@ int main (){
 				
 			case 2 : //menampilkan seluruh data secara ascending
 				Pegawai temp;
-				for (i=0; i<7; i++){
+				for (i=0; i<10; i++){
 						min = i;
 									
 						for (j = i; j<10; j++){
@@ -190,15 +190,21 @@ int main (){
 						p[i] = p[min];
 						p[min] = temp;
 					}
-								
-				for (a=0; a<co; a++){
-					printf ("|  	%s  	  |	  %i      |  	%s	 | 	%s 	  |	%i\t 	  |\n", p[a].nama_pegawai, p[a].id_pegawai, p[a].jabatan_pegawai, p[a].asal_kota, p[a].umur_pegawai);
+				if (b == 0){
+					for (a=0; a<10; a++){
+						printf ("|  	%s  	  |	  %i      |  	%s	 | 	%s 	  |	%i\t 	  |\n", p[a].nama_pegawai, p[a].id_pegawai, p[a].jabatan_pegawai, p[a].asal_kota, p[a].umur_pegawai);
+					}
 				}
+				else{
+					for (a=0; a<co; a++){
+						printf ("|  	%s  	  |	  %i      |  	%s	 | 	%s 	  |	%i\t 	  |\n", p[a].nama_pegawai, p[a].id_pegawai, p[a].jabatan_pegawai, p[a].asal_kota, p[a].umur_pegawai);
+					}	
+				}	
 			break;
 				
 			case 3 : //menampilkan seluruh data secara descending
 				Pegawai temp2;
-				for (i=0; i<7; i++){
+				for (i=0; i<10; i++){
 						min = i;
 						
 						for (j = i; j<10; j++){
@@ -210,14 +216,24 @@ int main (){
 						p[i] = p[min];
 						p[min] = temp;
 					}
-					
-				printf ("--------------------<<(PENGURUTAN DATA PEGAWAI SECARA ASCENDING)>>----------------\n");
-				printf ("+----------------+---------------+--------------+----------------+---------------+\n");
-	   			printf ("|  Nama Pegawai  |   Id Pegawai  |  Jabatan	 | Asal Kota   	  | 	Umur	  |\n");
-	    		printf ("+----------------+---------------+--------------+----------------+---------------+\n");
-				for (a=0; a<co; a++){
-					printf ("|  	%s  	  |	  %i      |  	%s	 | 	%s 	  |	%i\t 	  |\n", p[a].nama_pegawai, p[a].id_pegawai, p[a].jabatan_pegawai, p[a].asal_kota, p[a].umur_pegawai);
-				}	
+				if (b == 0){
+					printf ("--------------------<<(PENGURUTAN DATA PEGAWAI SECARA DESCENDING)>>----------------\n");
+					printf ("+----------------+---------------+--------------+----------------+---------------+\n");
+		   			printf ("|  Nama Pegawai  |   Id Pegawai  |  Jabatan	 | Asal Kota   	  | 	Umur	  |\n");
+		    		printf ("+----------------+---------------+--------------+----------------+---------------+\n");
+					for (a=0; a<10; a++){
+						printf ("|  	%s  	  |	  %i      |  	%s	 | 	%s 	  |	%i\t 	  |\n", p[a].nama_pegawai, p[a].id_pegawai, p[a].jabatan_pegawai, p[a].asal_kota, p[a].umur_pegawai);
+					}
+				}
+				else {
+					printf ("--------------------<<(PENGURUTAN DATA PEGAWAI SECARA DESCENDING)>>----------------\n");
+					printf ("+----------------+---------------+--------------+----------------+---------------+\n");
+		   			printf ("|  Nama Pegawai  |   Id Pegawai  |  Jabatan	 | Asal Kota   	  | 	Umur	  |\n");
+		    		printf ("+----------------+---------------+--------------+----------------+---------------+\n");
+					for (a=0; a<co; a++){
+						printf ("|  	%s  	  |	  %i      |  	%s	 | 	%s 	  |	%i\t 	  |\n", p[a].nama_pegawai, p[a].id_pegawai, p[a].jabatan_pegawai, p[a].asal_kota, p[a].umur_pegawai);
+					}
+				}
 			break;
 			
 				
