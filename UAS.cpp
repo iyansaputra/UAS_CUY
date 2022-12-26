@@ -305,8 +305,7 @@ int main (){
 	 			 printf("Pegawai dengan ID %d tidak ditemukan\n", idCari);
 				}
 			break;
-		}
-		
+		}	
 	}while (x!=6);
 
 return 0;
