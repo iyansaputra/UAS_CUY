@@ -312,7 +312,7 @@ int main (){
 			break;
 		}
 		
-	}while (x!=5);
+	}while (x!=6);
 
 return 0;
 }
