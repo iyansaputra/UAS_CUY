@@ -316,3 +316,21 @@ int main (){
 
 return 0;
 }
+//iki y pal cek en sek, nek misal salah ganti ae lambang e
+//Pegawai temp;
+//			for (i=0; i<7; i++){
+//					min = i;
+//					
+//					for (j = i; j<10; j++){
+//						if(p[min].id_pegawai > p[j].id_pegawai){
+//							min = j;
+//						}
+//					}
+//					temp = p[i];
+//					p[i] = p[min];
+//					p[min] = temp;
+//				}
+//				
+//for (a=0; a<=6; a++){
+//			printf ("|  	%s  	  |	  %i      |  	%s	 | 	%s 	  |	%i\t 	  |\n", p[a].nama_pegawai, p[a].id_pegawai, p[a].jabatan_pegawai, p[a].asal_kota, p[a].umur_pegawai);
+//			}
