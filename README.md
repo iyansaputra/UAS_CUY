@@ -44,7 +44,7 @@ Final project yang kami kerjakan dengan judul “Aplikasi Sistem Data Pegawai”
 3.	Sorting merupakan suatu proses (operasi) yang mengurutkan data dalam suatu urutan yang diberikan (increasing atau decreasing.
     Metode yang digunakan meliputi: Bubble sort, Selection Sort, dan Insertion Sort
     
-4.	
+4.	Searching merupakan suatu proses (operasi) untuk mencari lokasi dari data yang diberikan dalam suatu urutan data.
     
 ## Penutup
 
