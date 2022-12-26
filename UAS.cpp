@@ -72,7 +72,7 @@ void AddDataPegawai(struct Pegawai *p){
 	p[6].gaji = 16000000;
 	p[6].durasi_lembur = 9;
 	
-		strcpy (p[7].nama_pegawai, "Eri");
+	strcpy (p[7].nama_pegawai, "Eri");
 	p[7].id_pegawai = 340;
 	strcpy (p[7].jabatan_pegawai, "Staff");
 	strcpy (p[7].asal_kota, "Jogja");
