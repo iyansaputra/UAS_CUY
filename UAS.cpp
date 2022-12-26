@@ -1,4 +1,3 @@
-//bentar gaes, sorting sama hitung gaji aku benerin dulu bentar. 
 #include <stdio.h>
 #include <math.h>
 #include <string>
@@ -103,7 +102,7 @@ int main (){
 	Pegawai p[30];
 	AddDataPegawai(p);
 	
-	int a, x, b, c, co, j, d, lembur, lanjut, i, min=0;
+	int a, x, b, c, co, l, j, d, lembur, lanjut, i, min=0;
 	
 	printf ("+----------------+---------------+--------------+----------------+---------------+\n");
    	printf ("|  Nama Pegawai  |   Id Pegawai  |  Jabatan	 |  Asal Kota     | 	Umur	  |\n");
@@ -121,7 +120,7 @@ int main (){
 		printf ("1. Input Data Baru\n");
 		printf ("2. Tampilkan Seluruh Data (Ascending)\n");
 		printf ("3. Tampilkan Seluruh Data (Descending)\n");
-		printf ("4. Gaji Pegawai\n");
+		printf ("4. Hitung Total Gaji Pegawai\n");
 		printf ("5. Cari ID Pegawai\n");
 		printf ("===========================\n");
 		printf ("Masukan Pilihan Anda : ");
@@ -224,58 +223,52 @@ int main (){
 				
 			case 4 ://Menghitung gaji
 				AddDataPegawai(p);
-				printf ("1. Hitung gaji pegawai\n");
-				printf ("2. Tampilkan gaji pegawai\n");
-				printf ("Masukkan pilihan anda: "); scanf ("%d", &d);
-				switch (d){
-					case 1:
-						do{
-							printf ("Masukkan ID pegawai: "); scanf ("%d", &p[a].id_pegawai);
-							printf ("Masukkan Nama Pegawai: "); scanf ("%s", &p[a].nama_pegawai);
-							printf ("Durasi Lembur (Jam): "); scanf ("%d", &j);
-								
-							lembur=j*100000;
-							printf ("Uang lembur= Rp.%d\n", lembur);
-							printf ("1. Direksi (CEO)\n");
-							printf ("2. Direktur Utama\n");
-							printf ("3. Direktur\n");
-							printf ("4. Manager\n");
-							printf ("5. Manager Pemasaran\n");
-							printf ("6. Staff\n");
-							printf ("Masukan Pilihan Jabatan : "); scanf ("%d", &c);
-							
-							switch (c){
-								case 1:
-									printf ("Gaji = Rp.200.000.000 + Rp. %d\n", lembur);
-								break;
-								case 2:
-									printf ("Gaji = Rp.500.000.000 + Rp. %d\n", lembur);
-								break;
-								case 3:
-									printf ("Gaji = Rp.200.000.000 + Rp. %d\n", lembur);
-								break;
-								case 4:
-									printf ("Gaji = Rp.10.000.000 + Rp. %d\n", lembur);
-								break;
-								case 5:
-									printf ("Gaji = Rp.12.000.000 + Rp. %d\n", lembur);
-								break;
-								case 6:
-									printf ("Gaji = Rp.4.000.000 + Rp. %d\n", lembur);
-								break;
-							}
-							printf ("\nInput 1 untuk lanjut\nInput 0 untuk berhenti: "); scanf ("%d", &lanjut);
-							printf ("\n");
-							system ("cls");
-						}while (lanjut!=0);
-					break;
-//					case 2:
-//						for (a=0; a<){
-//							
-//						}
-//					break;
-					}
+				
+				do{
+					printf ("Masukkan ID pegawai: "); scanf ("%d", &p[a].id_pegawai);
+					printf ("Masukkan Nama Pegawai: "); scanf ("%s", &p[a].nama_pegawai);
+					printf ("1. Lembur\n2. Tidak lembur\n"); scanf ("%d", &l);
+					if (l==1){
+						printf ("Durasi Lembur (Jam): "); scanf ("%d", &j);
 						
+						lembur=j*100000;
+						printf ("Uang lembur= Rp.%d\n", lembur);
+					}
+					else{
+						lembur=NULL;
+					}
+					printf ("1. Direksi (CEO)\n");
+					printf ("2. Direktur Utama\n");
+					printf ("3. Direktur\n");
+					printf ("4. Manager\n");
+					printf ("5. Manager Pemasaran\n");
+					printf ("6. Staff\n");
+					printf ("Masukan Pilihan Jabatan : "); scanf ("%d", &c);
+					
+					switch (c){
+						case 1:
+							printf ("Gaji = Rp.200.000.000 + Rp. %d\n", lembur);
+						break;
+						case 2:
+							printf ("Gaji = Rp.500.000.000 + Rp. %d\n", lembur);
+						break;
+						case 3:
+							printf ("Gaji = Rp.200.000.000 + Rp. %d\n", lembur);
+						break;
+						case 4:
+							printf ("Gaji = Rp.10.000.000 + Rp. %d\n", lembur);
+						break;
+						case 5:
+							printf ("Gaji = Rp.12.000.000 + Rp. %d\n", lembur);
+						break;
+						case 6:
+							printf ("Gaji = Rp.4.000.000 + Rp. %d\n", lembur);
+						break;
+					}
+					printf ("\nInput 1 untuk lanjut\nInput 0 untuk berhenti: "); scanf ("%d", &lanjut);
+					printf ("\n");
+					system ("cls");
+				}while (lanjut!=0);
 			break;
 				
 			case 5 : //cari id pegawai
