@@ -1,25 +1,19 @@
+//bentar gaes, sorting sama hitung gaji aku benerin dulu bentar. 
 #include <stdio.h>
 #include <math.h>
 #include <string>
 #include <windows.h>
 
-	struct Pegawai{
-		char nama_pegawai[40];
-		char asal_kota[20];
-		char jabatan_pegawai[15];
-		int id_pegawai;
-		int umur_pegawai;
-		int gaji;
-		int durasi_lembur;
+struct Pegawai{
+	char nama_pegawai[40];
+	char asal_kota[20];
+	char jabatan_pegawai[15];
+	int id_pegawai;
+	int umur_pegawai;
+	int gaji;
+	int durasi_lembur;
 };
 
-	struct Baru{
-		char nama_baru[40];
-		char kota_baru[20];
-		char jabatan[15];
-		int id_baru;
-		int umur_baru;
-	};
 
 //Data Awal Program
 void AddDataPegawai(struct Pegawai *p){
@@ -79,23 +73,45 @@ void AddDataPegawai(struct Pegawai *p){
 	p[6].gaji = 16000000;
 	p[6].durasi_lembur = 9;
 	
+		strcpy (p[7].nama_pegawai, "Eri");
+	p[7].id_pegawai = 340;
+	strcpy (p[7].jabatan_pegawai, "Staff");
+	strcpy (p[7].asal_kota, "Jogja");
+	p[7].umur_pegawai = 25;
+	p[7].gaji = 16000000;
+	p[7].durasi_lembur = 9;
+	
+	strcpy (p[8].nama_pegawai, "Eri");
+	p[8].id_pegawai = 340;
+	strcpy (p[8].jabatan_pegawai, "Staff");
+	strcpy (p[8].asal_kota, "Jogja");
+	p[8].umur_pegawai = 25;
+	p[8].gaji = 16000000;
+	p[8].durasi_lembur = 9;
+	
+	strcpy (p[9].nama_pegawai, "Eri");
+	p[9].id_pegawai = 340;
+	strcpy (p[9].jabatan_pegawai, "Staff");
+	strcpy (p[9].asal_kota, "Jogja");
+	p[9].umur_pegawai = 25;
+	p[9].gaji = 16000000;
+	p[9].durasi_lembur = 9;
 }
 
 
 int main (){
 	Pegawai p[10];
 	AddDataPegawai(p);
-	Baru n[10];
 	
-	int a, x, b, c, l, j, lembur, lanjut, i, min=0;
+	int a, x, b, c, co, l, j, p, lembur, lanjut, i, min=0;
 	
 	printf ("+----------------+---------------+--------------+----------------+---------------+\n");
    	printf ("|  Nama Pegawai  |   Id Pegawai  |  Jabatan	 |  Asal Kota     | 	Umur	  |\n");
     	printf ("+----------------+---------------+--------------+----------------+---------------+\n");
 	
-	for (a=0; a<=6; a++){
-	printf ("|  	%s 	  |	  %i	  |  	%s	 | 	%s	  |	%i	  |\n", p[a].nama_pegawai, p[a].id_pegawai, p[a].jabatan_pegawai, p[a].asal_kota, p[a].umur_pegawai);
-		}
+	for (a=0; a<10; a++){
+		printf ("|  	%s 	  |	  %i	  |  	%s	 | 	%s	  |	%i	  |\n", p[a].nama_pegawai, p[a].id_pegawai, p[a].jabatan_pegawai, p[a].asal_kota, p[a].umur_pegawai);
+	}
 	printf ("\n\n");
 	
 	do {
@@ -105,7 +121,7 @@ int main (){
 		printf ("1. Input Data Baru\n");
 		printf ("2. Tampilkan Seluruh Data (Ascending)\n");
 		printf ("3. Tampilkan Seluruh Data (Descending)\n");
-		printf ("4. Hitung Gaji Pegawai\n");
+		printf ("4. Gaji Pegawai\n");
 		printf ("5. Cari ID Pegawai\n");
 		printf ("===========================\n");
 		printf ("Masukan Pilihan Anda : ");
@@ -117,9 +133,10 @@ int main (){
 				printf ("Memasukan Data Baru :\n");
 				printf ("======================\n");
 				printf ("Masukan Data Pegawai Baru (MAX 10) : "); scanf ("%d", &b);
+				co = b + 9;
 				
-				for (a=0; a<b; a++){
-					printf ("Masukan Nama Pegawai : "); scanf ("%s", n[a].nama_baru);
+				for (a=9; a<co; a++){
+					printf ("Masukan Nama Pegawai : "); scanf ("%s", p[a].nama_pegawai);
 					printf ("Masukan ID Pegawai : "); scanf ("%d", &p[a].id_pegawai);
 					printf ("Masukan Jabatan Pegawai : \n");
 					printf ("=============================\n");
@@ -132,183 +149,155 @@ int main (){
 					printf ("Masukan Pilihan Jabatan : "); scanf ("%d", &c);
 					
 						if (c==1){
-							n[a].jabatan, "Direksi";
+							p[a].jabatan_pegawai, "Direksi";
 						}
 						else if (c==2){
-							n[a].jabatan, "Direktur Utama";
+							p[a].jabatan_pegawai, "Direktur Utama";
 						}
 						else if (c==3){
-							n[a].jabatan, "Direktur";
+							p[a].jabatan_pegawai, "Direktur";
 						}
 						else if (c==4){
-							n[a].jabatan, "Manager";
+							p[a].jabatan_pegawai, "Manager";
 						}
 						else if (c==5){
-							n[a].jabatan, "Manager Pemasaran";
+							p[a].jabatan_pegawai, "Manager Pemasaran";
 						}
 						else if (c==6){
-							n[a].jabatan, "Staff";
+							p[a].jabatan_pegawai, "Staff";
 						}
 						else{
 							printf ("Anda Salah Memasukan Angka\n");
 						}
 					
-					printf ("Asal Kota Pegawai : "); scanf ("%s", n[a].kota_baru);
-					printf ("Umur Pegawai : "); scanf ("%d", &n[a].umur_baru);
+					printf ("Asal Kota Pegawai : "); scanf ("%s", &p[a].asal_kota);
+					printf ("Umur Pegawai : "); scanf ("%d", &p[a].umur_pegawai);
 					printf ("=======================\n");
 					system ("cls");
 				}
 			break;
 				
-			case 3 : //menampilkan seluruh data secara descending
-			Pegawai temp;
-			for (i=0; i<7; i++){
-					min = i;
-					
-					for (j = i; j<10; j++){
-						if(p[min].id_pegawai < p[j].id_pegawai){
-							min = j;
+			case 2 : //menampilkan seluruh data secara ascending
+				Pegawai temp;
+				for (i=0; i<7; i++){
+						min = i;
+									
+						for (j = i; j<10; j++){
+							if(p[min].id_pegawai > p[j].id_pegawai){
+								min = j;
+							}
 						}
+						temp = p[i];
+						p[i] = p[min];
+						p[min] = temp;
 					}
-					temp = p[i];
-					p[i] = p[min];
-					p[min] = temp;
+								
+				for (a=0; a<co; a++){
+					printf ("|  	%s  	  |	  %i      |  	%s	 | 	%s 	  |	%i\t 	  |\n", p[a].nama_pegawai, p[a].id_pegawai, p[a].jabatan_pegawai, p[a].asal_kota, p[a].umur_pegawai);
 				}
-				
-			Baru temp1;
-			for (i=0; i<10; i++){
-					min = i;
-					
-					for (j = i; j<10; j++){
-						if(n[min].id_baru > n[j].id_baru){
-							min = j;
-						}
-					}
-					temp1 = n[i];
-					n[i] = n[min];
-					n[min] = temp1;
-				}
-			printf ("--------------------<<(PENGURUTAN DATA PEGAWAI SECARA ASCENDING)>>----------------\n");
-			printf ("+----------------+---------------+--------------+----------------+---------------+\n");
-   			printf ("|  Nama Pegawai  |   Id Pegawai  |  Jabatan	 | Asal Kota   	  | 	Umur	  |\n");
-    			printf ("+----------------+---------------+--------------+----------------+---------------+\n");
-			for (a=0; a<=6; a++){
-			printf ("|  	%s  	  |	  %i      |  	%s	 | 	%s 	  |	%i\t 	  |\n", p[a].nama_pegawai, p[a].id_pegawai, p[a].jabatan_pegawai, p[a].asal_kota, p[a].umur_pegawai);
-			}
-			for (a=0; a<b; a++){
-			printf ("|  	%s  	  |	  %i      |  	%s	 | 	%s 	  |	%i	  |\n", n[a].nama_baru, n[a].id_baru, n[a].jabatan, n[a].kota_baru, n[a].umur_baru);
-			}	
 			break;
 				
 			case 3 : //menampilkan seluruh data secara descending
-			Pegawai temp;
-			for (i=0; i<7; i++){
-					min = i;
-					
-					for (j = i; j<10; j++){
-						if(p[min].id_pegawai > p[j].id_pegawai){
-							min = j;
+				Pegawai temp2;
+				for (i=0; i<7; i++){
+						min = i;
+						
+						for (j = i; j<10; j++){
+							if(p[min].id_pegawai < p[j].id_pegawai){
+								min = j;
+							}
 						}
+						temp = p[i];
+						p[i] = p[min];
+						p[min] = temp;
 					}
-					temp = p[i];
-					p[i] = p[min];
-					p[min] = temp;
-				}
-				
-			Baru temp1;
-			for (i=0; i<10; i++){
-					min = i;
 					
-					for (j = i; j<10; j++){
-						if(n[min].id_baru > n[j].id_baru){
-							min = j;
-						}
-					}
-					temp1 = n[i];
-					n[i] = n[min];
-					n[min] = temp1;
-				}
-			printf ("--------------------<<(PENGURUTAN DATA PEGAWAI SECARA ASCENDING)>>----------------\n");
-			printf ("+----------------+---------------+--------------+----------------+---------------+\n");
-   			printf ("|  Nama Pegawai  |   Id Pegawai  |  Jabatan	 | Asal Kota   	  | 	Umur	  |\n");
-    			printf ("+----------------+---------------+--------------+----------------+---------------+\n");
-			for (a=0; a<=6; a++){
-			printf ("|  	%s  	  |	  %i      |  	%s	 | 	%s 	  |	%i\t 	  |\n", p[a].nama_pegawai, p[a].id_pegawai, p[a].jabatan_pegawai, p[a].asal_kota, p[a].umur_pegawai);
-			}
-			for (a=0; a<b; a++){
-			printf ("|  	%s  	  |	  %i      |  	%s	 | 	%s 	  |	%i	  |\n", n[a].nama_baru, n[a].id_baru, n[a].jabatan, n[a].kota_baru, n[a].umur_baru);
-			}	
+				printf ("--------------------<<(PENGURUTAN DATA PEGAWAI SECARA ASCENDING)>>----------------\n");
+				printf ("+----------------+---------------+--------------+----------------+---------------+\n");
+	   			printf ("|  Nama Pegawai  |   Id Pegawai  |  Jabatan	 | Asal Kota   	  | 	Umur	  |\n");
+	    		printf ("+----------------+---------------+--------------+----------------+---------------+\n");
+				for (a=0; a<co; a++){
+					printf ("|  	%s  	  |	  %i      |  	%s	 | 	%s 	  |	%i\t 	  |\n", p[a].nama_pegawai, p[a].id_pegawai, p[a].jabatan_pegawai, p[a].asal_kota, p[a].umur_pegawai);
+				}	
 			break;
 			
 				
 			case 4 ://Menghitung gaji
 				AddDataPegawai(p);
-				
-				do{
-					printf ("Masukkan ID pegawai: "); scanf ("%d", &p[a].id_pegawai);
-					printf ("Masukkan Nama Pegawai: "); scanf ("%s", &p[a].nama_pegawai);
-					printf ("1. Lembur\n2. Tidak lembur\n"); scanf ("%d", &l);
-					if (l==1){
-						printf ("Durasi Lembur (Jam): "); scanf ("%d", &j);
+				printf ("1. Hitung gaji pegawai\n");
+				printf ("2. Tampilkan gaji pegawai\n");
+				printf ("Masukkan pilihan anda: "); scanf ("%d", &p);
+				switch (p){
+					case 1:
+						do{
+							printf ("Masukkan ID pegawai: "); scanf ("%d", &p[a].id_pegawai);
+							printf ("Masukkan Nama Pegawai: "); scanf ("%s", &p[a].nama_pegawai);
+							printf ("1. Lembur\n2. Tidak lembur\n"); scanf ("%d", &l);
+							if (l==1){
+								printf ("Durasi Lembur (Jam): "); scanf ("%d", &j);
+								
+								lembur=j*100000;
+								printf ("Uang lembur= Rp.%d\n", lembur);
+							}
+							else{
+								lembur=NULL;
+							}
+							printf ("1. Direksi (CEO)\n");
+							printf ("2. Direktur Utama\n");
+							printf ("3. Direktur\n");
+							printf ("4. Manager\n");
+							printf ("5. Manager Pemasaran\n");
+							printf ("6. Staff\n");
+							printf ("Masukan Pilihan Jabatan : "); scanf ("%d", &c);
+							
+							switch (c){
+								case 1:
+									printf ("Gaji = Rp.200.000.000 + Rp. %d\n", lembur);
+								break;
+								case 2:
+									printf ("Gaji = Rp.500.000.000 + Rp. %d\n", lembur);
+								break;
+								case 3:
+									printf ("Gaji = Rp.200.000.000 + Rp. %d\n", lembur);
+								break;
+								case 4:
+									printf ("Gaji = Rp.10.000.000 + Rp. %d\n", lembur);
+								break;
+								case 5:
+									printf ("Gaji = Rp.12.000.000 + Rp. %d\n", lembur);
+								break;
+								case 6:
+									printf ("Gaji = Rp.4.000.000 + Rp. %d\n", lembur);
+								break;
+							}
+							printf ("\nInput 1 untuk lanjut\nInput 0 untuk berhenti: "); scanf ("%d", &lanjut);
+							printf ("\n");
+							system ("cls");
+						}while (lanjut!=0);
+					break;
+					case 2:
+						for (a=0; a<)
+					}
 						
-						lembur=j*100000;
-						printf ("Uang lembur= Rp.%d\n", lembur);
-					}
-					else{
-						lembur=NULL;
-					}
-					printf ("1. Direksi (CEO)\n");
-					printf ("2. Direktur Utama\n");
-					printf ("3. Direktur\n");
-					printf ("4. Manager\n");
-					printf ("5. Manager Pemasaran\n");
-					printf ("6. Staff\n");
-					printf ("Masukan Pilihan Jabatan : "); scanf ("%d", &c);
-					
-					switch (c){
-						case 1:
-							printf ("Gaji = Rp.200.000.000 + Rp. %d\n", lembur);
-						break;
-						case 2:
-							printf ("Gaji = Rp.500.000.000 + Rp. %d\n", lembur);
-						break;
-						case 3:
-							printf ("Gaji = Rp.200.000.000 + Rp. %d\n", lembur);
-						break;
-						case 4:
-							printf ("Gaji = Rp.10.000.000 + Rp. %d\n", lembur);
-						break;
-						case 5:
-							printf ("Gaji = Rp.12.000.000 + Rp. %d\n", lembur);
-						break;
-						case 6:
-							printf ("Gaji = Rp.4.000.000 + Rp. %d\n", lembur);
-						break;
-					}
-					printf ("\nInput 1 untuk lanjut\nInput 0 untuk berhenti: "); scanf ("%d", &lanjut);
-					printf ("\n");
-					system ("cls");
-				}while (lanjut!=0);
 			break;
 				
 			case 5 : //cari id pegawai
 				int idCari, i;
-			printf("Masukkan ID pegawai yang akan dicari :  ");
-			scanf("%d", &idCari);
-			
-			for (i = 0; i < 15; i++) {
- 				 if (p[i].id_pegawai == idCari) {
-				 printf("Pegawai dengan ID %d adalah \n %s \n", idCari, p[i].nama_pegawai);  	
-				 printf(" Jabatan   : %s\n",p[i].jabatan_pegawai);
-				 printf(" Asal kota : %s\n",p[i].asal_kota);
-				 printf(" Umur      : %i\n",p[i].umur_pegawai);
-    		break;
-  			}
-			}
-			if (i == 15) {
- 			 printf("Pegawai dengan ID %d tidak ditemukan\n", idCari);
-			}
-
+				printf("Masukkan ID pegawai yang akan dicari :  ");
+				scanf("%d", &idCari);
+				
+				for (i = 0; i < 15; i++) {
+	 				 if (p[i].id_pegawai == idCari) {
+					 printf("Pegawai dengan ID %d adalah \n %s \n", idCari, p[i].nama_pegawai);  	
+					 printf(" Jabatan   : %s\n",p[i].jabatan_pegawai);
+					 printf(" Asal kota : %s\n",p[i].asal_kota);
+					 printf(" Umur      : %i\n",p[i].umur_pegawai);
+	    		break;
+	  			}
+				}
+				if (i == 15) {
+	 			 printf("Pegawai dengan ID %d tidak ditemukan\n", idCari);
+				}
 			break;
 		}
 		
@@ -316,21 +305,4 @@ int main (){
 
 return 0;
 }
-//iki y pal cek en sek, nek misal salah ganti ae lambang e
-//Pegawai temp;
-//			for (i=0; i<7; i++){
-//					min = i;
-//					
-//					for (j = i; j<10; j++){
-//						if(p[min].id_pegawai > p[j].id_pegawai){
-//							min = j;
-//						}
-//					}
-//					temp = p[i];
-//					p[i] = p[min];
-//					p[min] = temp;
-//				}
-//				
-//for (a=0; a<=6; a++){
-//			printf ("|  	%s  	  |	  %i      |  	%s	 | 	%s 	  |	%i\t 	  |\n", p[a].nama_pegawai, p[a].id_pegawai, p[a].jabatan_pegawai, p[a].asal_kota, p[a].umur_pegawai);
-//			}
+
