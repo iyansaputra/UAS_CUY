@@ -34,7 +34,7 @@ void AddDataPegawai(struct Pegawai *p){
 	
 	strcpy (p[2].nama_pegawai, "Lala");
 	p[2].id_pegawai = 134;
-	strcpy (p[2].jabatan_pegawai, "Manajer Pemasaran");
+	strcpy (p[2].jabatan_pegawai, "M Pemasaran");
 	strcpy (p[2].asal_kota, "Semarang");
 	p[2].umur_pegawai = 22;
 	p[2].gaji = 12000000;
@@ -42,7 +42,7 @@ void AddDataPegawai(struct Pegawai *p){
 	
 	strcpy (p[3].nama_pegawai, "Didi");
 	p[3].id_pegawai = 310;
-	strcpy (p[3].jabatan_pegawai, "Direktur Utama");
+	strcpy (p[3].jabatan_pegawai, "Direk Utama");
 	strcpy (p[3].asal_kota, "Jambi");
 	p[3].umur_pegawai = 35;
 	p[3].gaji = 50000000;
@@ -109,7 +109,7 @@ int main (){
     	printf ("+----------------+---------------+--------------+----------------+---------------+\n");
 	
 	for (a=0; a<10; a++){
-		printf ("|  	%s 	  |	  %i	  |  	%s	 | 	%s	  |	%i	  |\n", p[a].nama_pegawai, p[a].id_pegawai, p[a].jabatan_pegawai, p[a].asal_kota, p[a].umur_pegawai);
+		printf ("| 	%s 	 |	%d 	 |%s 	 |%s 	  |	%d  	  |\n", p[a].nama_pegawai, p[a].id_pegawai, p[a].jabatan_pegawai, p[a].asal_kota, p[a].umur_pegawai);
 	}
 	printf ("\n\n");
 	
@@ -196,7 +196,7 @@ int main (){
 		   			printf ("|  Nama Pegawai  |   Id Pegawai  |  Jabatan	 | Asal Kota   	  | 	Umur	  |\n");
 		    		printf ("+----------------+---------------+--------------+----------------+---------------+\n");
 					for (a=0; a<10; a++){
-						printf ("|  	%s  	  |	  %i      |  	%s	 | 	%s 	  |	%i\t	  |\n", p[a].nama_pegawai, p[a].id_pegawai, p[a].jabatan_pegawai, p[a].asal_kota, p[a].umur_pegawai);
+						printf ("| 	%s 	 |	%d 	 |%s 	 |%s 	  |	%d  	  |\n", p[a].nama_pegawai, p[a].id_pegawai, p[a].jabatan_pegawai, p[a].asal_kota, p[a].umur_pegawai);
 					}
 				}
 				else{
@@ -205,7 +205,7 @@ int main (){
 		   			printf ("|  Nama Pegawai  |   Id Pegawai  |  Jabatan	 | Asal Kota   	  | 	Umur	  |\n");
 		    		printf ("+----------------+---------------+--------------+----------------+---------------+\n");
 					for (a=0; a<co; a++){
-						printf ("|  	%s  	  |	  %i      |  	%s	 | 	%s 	  |	%i\t 	  |\n", p[a].nama_pegawai, p[a].id_pegawai, p[a].jabatan_pegawai, p[a].asal_kota, p[a].umur_pegawai);
+						printf ("| 	%s 	 |	%d 	 |%s 	 |%s 	  |	%d  	  |\n", p[a].nama_pegawai, p[a].id_pegawai, p[a].jabatan_pegawai, p[a].asal_kota, p[a].umur_pegawai);
 					}	
 				}	
 			break;
@@ -230,7 +230,7 @@ int main (){
 		   			printf ("|  Nama Pegawai  |   Id Pegawai  |  Jabatan	 | Asal Kota   	  | 	Umur	  |\n");
 		    		printf ("+----------------+---------------+--------------+----------------+---------------+\n");
 					for (a=0; a<10; a++){
-						printf ("|  	%s  	  |	  %i      |  	%s	 | 	%s 	  |	%i\t 	  |\n", p[a].nama_pegawai, p[a].id_pegawai, p[a].jabatan_pegawai, p[a].asal_kota, p[a].umur_pegawai);
+						printf ("| 	%s 	 |	%d 	 |%s 	 |%s 	  |	%d  	  |\n", p[a].nama_pegawai, p[a].id_pegawai, p[a].jabatan_pegawai, p[a].asal_kota, p[a].umur_pegawai);
 					}
 				}
 				else {
@@ -239,7 +239,7 @@ int main (){
 		   			printf ("|  Nama Pegawai  |   Id Pegawai  |  Jabatan	 | Asal Kota   	  | 	Umur	  |\n");
 		    		printf ("+----------------+---------------+--------------+----------------+---------------+\n");
 					for (a=0; a<co; a++){
-						printf ("|  	%s  	  |	  %i      |  	%s	 | 	%s 	  |	%i\t 	  |\n", p[a].nama_pegawai, p[a].id_pegawai, p[a].jabatan_pegawai, p[a].asal_kota, p[a].umur_pegawai);
+						printf ("| 	%s 	 |	%d 	 |%s 	 |%s 	  |	%d  	  |\n", p[a].nama_pegawai, p[a].id_pegawai, p[a].jabatan_pegawai, p[a].asal_kota, p[a].umur_pegawai);
 					}
 				}
 			break;
